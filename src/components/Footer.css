@@ -1,0 +1,64 @@
+/***************** Footer ***********************/
+
+a {
+  font-size: 16px;
+}
+
+.footer {
+  border-top: 1px solid #ccc;
+}
+
+.row-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1px) and (max-width: 960px) {
+  .row-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .column {
+    display: flex;
+    justify-content: center;
+    padding-top: 48px;
+    max-width: 15vw;
+    width: 100%;
+    padding-bottom: 32px;
+    margin-bottom: 16px;
+  }
+}
+
+.column {
+  padding-top: 48px;
+  max-width: 15vw;
+  width: 100%;
+  padding-bottom: 32px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.column a {
+  text-transform: capitalize;
+}
+.column li {
+  padding: 0;
+  padding-bottom: 6px;
+  display: block;
+}
+
+.column ul {
+  padding: 0;
+  margin: 0;
+}
+
+.column li:first-child {
+  padding-top: 8px;
+}
+
+.column-title {
+  text-transform: uppercase;
+  font-size: 20px;
+}

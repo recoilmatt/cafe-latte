@@ -1,0 +1,20 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  min-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/v1612481199/esygdxurkndp2rs3aqap.jpg");
+  align-items: center;
+  justify-content: center;
+}
+
+.cta {
+  padding: 40px;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  border: none;
+}
