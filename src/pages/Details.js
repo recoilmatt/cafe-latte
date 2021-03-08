@@ -36,7 +36,7 @@ function Details() {
               alt="/"
             />
           </BoxDetails>
-          <BoxDetails>
+          <BoxDetails setIndex={setIndex}>
             <h2 title={product.title}>{product.title}</h2>
             <h3>${product.price}</h3>
             <p>{product.description}</p>
