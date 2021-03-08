@@ -16,7 +16,7 @@ function Details() {
   const { id } = useParams();
   const value = useContext(DataContext);
   const [products] = value.products;
-  // eslint-disable-next-line
+
   const [index, setIndex] = useState(0);
 
   const addCart = value.addCart;
