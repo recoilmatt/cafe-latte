@@ -2,7 +2,7 @@ import React from "react";
 
 //Components
 import Home from "./pages/Home";
-import Header from "./components/Header";
+/* import Header from "./components/Header"; */
 /* import Footer from "./Footer"; */
 import FooterTest from "./components/FooterTest";
 
@@ -13,12 +13,7 @@ import Details from "./pages/Details";
 import Cart from "./pages/Cart";
 
 //React Router
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  withRouter,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //Auth Pages
 import Signup from "./auth/Signup";
@@ -41,25 +36,6 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-const AnimatedSwitch = withRouter(({ location }) => (
-  <TransitionGroup>
-    <CSSTransition key={location.key} classNames="fade" timeout={0}>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        {/*  <PrivateRoute exact path="/dashboard" component={Dashboard} />
-        <PrivateRoute path="/update-profile" component={UpdateProfile} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/login" component={Login} />
-        <Route path="/forgot-password" component={ForgotPassword} />
-        <Route path="/products/:id" component={Details} />
-        <Route path="/cart" component={Cart} />
-        <Route path="/menu" component={Menu} /> */}
-        <Route path="/locations" component={LocationsSection} />
-      </Switch>
-    </CSSTransition>
-  </TransitionGroup>
-));
-
 function App() {
   return (
     <DataProvider>
@@ -70,8 +46,15 @@ function App() {
           autoHideDuration={200}
           style={{ width: "100vw", height: "100vh" }}
         >
-          <Header />
-          <AnimatedSwitch />
+          <Switch>
+            <Route exact path="/" component={Home} />
+
+            <Route path="/products/:id" component={Details} />
+
+            <Route path="/menu" component={Menu} />
+            <Route path="/locations" component={LocationsSection} />
+          </Switch>
+
           <FooterTest />
         </Scrollbars>
       </Router>
