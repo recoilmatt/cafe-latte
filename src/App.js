@@ -2,7 +2,7 @@ import React from "react";
 
 //Components
 import Home from "./pages/Home";
-import Header from "./components/Header";
+/* import Header from "./components/Header"; */
 /* import Footer from "./Footer"; */
 import FooterTest from "./components/FooterTest";
 
@@ -13,7 +13,7 @@ import Details from "./pages/Details";
 import Cart from "./pages/Cart";
 
 //Context
-import { AuthProvider } from "./contexts/AuthContext";
+/* import { AuthProvider } from "./contexts/AuthContext"; */
 
 //React Router
 import {
