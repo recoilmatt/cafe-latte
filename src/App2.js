@@ -2,7 +2,7 @@ import React from "react";
 
 //Components
 import Home from "./pages/Home";
-import HeaderTest from "./components/HeaderTest";
+import Header from "./components/Header";
 /* import Footer from "./Footer"; */
 import FooterTest from "./components/FooterTest";
 
@@ -72,7 +72,7 @@ function App2() {
           style={{ width: "100vw", height: "100vh" }}
         >
           <AuthProvider>
-            <HeaderTest />
+            <Header />
             <AnimatedSwitch />
             <FooterTest />
           </AuthProvider>
