@@ -20,14 +20,15 @@ import {
   withRouter,
 } from "react-router-dom";
 
-/* //Auth Pages
+//Context
+import { AuthProvider } from "./contexts/AuthContext";
+
+//Auth Pages
 import Signup from "./auth/Signup";
-import Dashboard from "./auth/Dashboard";
+
 import Login from "./auth/Login";
-import PrivateRoute from "./auth/PrivateRoute";
+
 import ForgotPassword from "./auth/ForgotPassword";
-import UpdateProfile from "./auth/UpdateProfile";
- */
 
 //DataProvider
 import DataProvider from "./components/DataProvider";
@@ -51,6 +52,10 @@ const AnimatedSwitch = withRouter(({ location }) => (
         <Route path="/cart" component={Cart} />
         <Route path="/menu" component={Menu} />
         <Route path="/locations" component={LocationsSection} />
+        <Route path="/signup" component={Signup} />
+        <Route path="/login" component={Login} />
+        <Route path="/forgot-password" component={ForgotPassword} />
+        <Route path="/products/:id" component={Details} />
       </Switch>
     </CSSTransition>
   </TransitionGroup>
@@ -66,10 +71,11 @@ function App2() {
           autoHideDuration={200}
           style={{ width: "100vw", height: "100vh" }}
         >
-          <HeaderTest />
-          <AnimatedSwitch />
-
-          <FooterTest />
+          <AuthProvider>
+            <HeaderTest />
+            <AnimatedSwitch />
+            <FooterTest />
+          </AuthProvider>
         </Scrollbars>
       </Router>
     </DataProvider>
