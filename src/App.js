@@ -66,20 +66,20 @@ const AnimatedSwitch = withRouter(({ location }) => (
 function App() {
   return (
     <DataProvider>
-      <AuthProvider>
-        <Router>
-          <Scrollbars
-            autoHide
-            autoHideTimeout={1000}
-            autoHideDuration={200}
-            style={{ width: "100vw", height: "100vh" }}
-          >
-            <Header />
-            <AnimatedSwitch />
-            <FooterTest />
-          </Scrollbars>
-        </Router>
-      </AuthProvider>
+      {/*   <AuthProvider> */}
+      <Router>
+        <Scrollbars
+          autoHide
+          autoHideTimeout={1000}
+          autoHideDuration={200}
+          style={{ width: "100vw", height: "100vh" }}
+        >
+          {/*      <Header /> */}
+          <AnimatedSwitch />
+          <FooterTest />
+        </Scrollbars>
+      </Router>
+      {/*      </AuthProvider> */}
     </DataProvider>
   );
 }
