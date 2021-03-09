@@ -1,7 +1,7 @@
 import React from "react";
 
 //AuthProvider
-/* import { AuthProvider } from "./contexts/AuthContext"; */
+import { AuthProvider } from "./contexts/AuthContext";
 
 //DataProvider
 import DataProvider from "./components/DataProvider";
@@ -26,20 +26,22 @@ import "./App.css";
 
 function App() {
   return (
-    <DataProvider>
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Home} />
+    <AuthProvider>
+      <DataProvider>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
 
-          <Route path="/products/:id" component={Details} />
-          <Route path="/cart" component={Cart} />
-          <Route path="/menu" component={Menu} />
-          <Route path="/locations" component={LocationsSection} />
-        </Switch>
+            <Route path="/products/:id" component={Details} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/menu" component={Menu} />
+            <Route path="/locations" component={LocationsSection} />
+          </Switch>
 
-        <FooterTest />
-      </Router>
-    </DataProvider>
+          <FooterTest />
+        </Router>
+      </DataProvider>
+    </AuthProvider>
   );
 }
 
