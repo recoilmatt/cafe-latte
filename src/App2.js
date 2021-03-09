@@ -2,6 +2,7 @@ import React from "react";
 
 //Components
 import Home from "./pages/Home";
+import HeaderTest from "./components/HeaderTest";
 
 /* import Footer from "./Footer"; */
 import FooterTest from "./components/FooterTest";
@@ -27,6 +28,7 @@ function App() {
   return (
     <DataProvider>
       <Router>
+        <HeaderTest />
         <Switch>
           <Scrollbars
             autoHide
@@ -37,8 +39,8 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/menu" component={Menu} />
             <Route path="/locations" component={LocationsSection} />
-            <FooterTest />
           </Scrollbars>
+          <FooterTest />
         </Switch>
       </Router>
     </DataProvider>
