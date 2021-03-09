@@ -50,7 +50,7 @@ const AnimatedSwitch = withRouter(({ location }) => (
       <Switch>
         <Route exact path="/" component={Home} />
         <PrivateRoute exact path="/dashboard" component={Dashboard} />
-        <PrivateRoute path="/update-profile" component={UpdateProfile} />
+        <PrivateRoute exact path="/update-profile" component={UpdateProfile} />
         <Route path="/signup" component={Signup} />
         <Route path="/login" component={Login} />
         <Route path="/forgot-password" component={ForgotPassword} />
