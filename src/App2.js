@@ -4,7 +4,7 @@ import React from "react";
 import FooterTest from "./components/FooterTest";
 
 //Pages
-import Menu from "./pages/Menu";
+import Home from "./pages/Home";
 
 //React Router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -17,7 +17,7 @@ function App2() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Menu} />
+        <Route exact path="/" component={Home} />
       </Switch>
 
       <FooterTest />
