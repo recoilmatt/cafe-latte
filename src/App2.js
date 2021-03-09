@@ -9,8 +9,6 @@ import Menu from "./pages/Menu";
 //React Router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-//Css Transition
-
 //Css Files
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -19,7 +17,7 @@ function App2() {
   return (
     <Router>
       <Switch>
-        <Route path="/" component={Menu} />
+        <Route exact path="/" component={Menu} />
       </Switch>
 
       <FooterTest />
