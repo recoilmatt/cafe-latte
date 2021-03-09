@@ -2,7 +2,7 @@ import React from "react";
 
 //Components
 import Home from "./pages/Home";
-import Header from "./components/Header";
+
 import FooterTest from "./components/FooterTest";
 
 //React Router
@@ -15,7 +15,6 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <Header />
       <Switch>
         <Route exact path="/" component={Home} />
       </Switch>
