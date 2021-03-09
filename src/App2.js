@@ -15,7 +15,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-function App() {
+function App2() {
   return (
     <Router>
       <Switch>
@@ -27,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default App2;
