@@ -46,11 +46,7 @@ function App2() {
           <HeaderTest />
           <Switch>
             <Route exact path="/" component={Home} />
-            <PrivateRoute exact path="/dashboard" component={Dashboard} />
-            <PrivateRoute path="/update-profile" component={UpdateProfile} />
-            <Route path="/signup" component={Signup} />
-            <Route path="/login" component={Login} />
-            <Route path="/forgot-password" component={ForgotPassword} />
+
             <Route path="/products/:id" component={Details} />
             <Route path="/cart" component={Cart} />
             <Route path="/menu" component={Menu} />
