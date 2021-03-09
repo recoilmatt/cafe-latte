@@ -1,9 +1,22 @@
 import React from "react";
 
-//Components
-import Home from "./pages/Home";
+//AuthProvider
+import { AuthProvider } from "./contexts/AuthContext";
 
+//DataProvider
+import DataProvider from "./components/DataProvider";
+
+//Components
+
+import Header from "./components/Header";
 import FooterTest from "./components/FooterTest";
+
+//Pages
+import Home from "./pages/Home";
+import Menu from "./pages/Menu";
+import LocationsSection from "./pages/LocationsSection";
+import Details from "./pages/Details";
+import Cart from "./pages/Cart";
 
 //React Router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -14,13 +27,23 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-      </Switch>
+    <DataProvider>
+      <AuthProvider>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
 
-      <FooterTest />
-    </Router>
+            <Route path="/products/:id" component={Details} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/menu" component={Menu} />
+            <Route path="/locations" component={LocationsSection} />
+          </Switch>
+
+          <FooterTest />
+        </Router>
+      </AuthProvider>
+    </DataProvider>
   );
 }
 
