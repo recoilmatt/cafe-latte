@@ -8,7 +8,6 @@ import DataProvider from "./components/DataProvider";
 
 //Components
 
-import Header from "./components/Header";
 import FooterTest from "./components/FooterTest";
 
 //Pages
@@ -30,7 +29,6 @@ function App() {
     <DataProvider>
       <AuthProvider>
         <Router>
-          <Header />
           <Switch>
             <Route exact path="/" component={Home} />
 
