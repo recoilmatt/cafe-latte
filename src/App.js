@@ -2,7 +2,7 @@ import React from "react";
 
 //Components
 import Home from "./pages/Home";
-/* import Header from "./components/Header"; */
+import Header from "./components/Header";
 /* import Footer from "./Footer"; */
 import FooterTest from "./components/FooterTest";
 
@@ -13,7 +13,7 @@ import Details from "./pages/Details";
 import Cart from "./pages/Cart";
 
 //Context
-/* import { AuthProvider } from "./contexts/AuthContext"; */
+import { AuthProvider } from "./contexts/AuthContext";
 
 //React Router
 import {
@@ -50,7 +50,7 @@ const AnimatedSwitch = withRouter(({ location }) => (
       <Switch>
         <Route exact path="/" component={Home} />
         <PrivateRoute exact path="/dashboard" component={Dashboard} />
-        <PrivateRoute exact path="/update-profile" component={UpdateProfile} />
+        <PrivateRoute path="/update-profile" component={UpdateProfile} />
         <Route path="/signup" component={Signup} />
         <Route path="/login" component={Login} />
         <Route path="/forgot-password" component={ForgotPassword} />
@@ -66,20 +66,20 @@ const AnimatedSwitch = withRouter(({ location }) => (
 function App() {
   return (
     <DataProvider>
-      {/*   <AuthProvider> */}
-      <Router>
-        <Scrollbars
-          autoHide
-          autoHideTimeout={1000}
-          autoHideDuration={200}
-          style={{ width: "100vw", height: "100vh" }}
-        >
-          {/*      <Header /> */}
-          <AnimatedSwitch />
-          <FooterTest />
-        </Scrollbars>
-      </Router>
-      {/*      </AuthProvider> */}
+      <AuthProvider>
+        <Router>
+          <Scrollbars
+            autoHide
+            autoHideTimeout={1000}
+            autoHideDuration={200}
+            style={{ width: "100vw", height: "100vh" }}
+          >
+            <Header />
+            <AnimatedSwitch />
+            <FooterTest />
+          </Scrollbars>
+        </Router>
+      </AuthProvider>
     </DataProvider>
   );
 }
