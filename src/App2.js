@@ -15,13 +15,14 @@ import Cart from "./pages/Cart";
 //React Router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-//Auth Pages
+/* //Auth Pages
 import Signup from "./auth/Signup";
 import Dashboard from "./auth/Dashboard";
 import Login from "./auth/Login";
 import PrivateRoute from "./auth/PrivateRoute";
 import ForgotPassword from "./auth/ForgotPassword";
 import UpdateProfile from "./auth/UpdateProfile";
+ */
 
 //DataProvider
 import DataProvider from "./components/DataProvider";
