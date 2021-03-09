@@ -48,7 +48,7 @@ const AnimatedSwitch = withRouter(({ location }) => (
   <TransitionGroup>
     <CSSTransition key={location.key} classNames="fade" timeout={0}>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route path="/" component={Home} />
         <PrivateRoute exact path="/dashboard" component={Dashboard} />
         <PrivateRoute exact path="/update-profile" component={UpdateProfile} />
         <Route path="/signup" component={Signup} />
